@@ -8,7 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 #include the codebase in the pythonpath (you have to mount this from your host -v)
-ENV PYTHONPATH "${PYTHONPATH}:/codebase"
+ENV PYTHONPATH "PYTHONPATH=/codebase"
 
 # Install pip requirements
 COPY requirements.txt .
