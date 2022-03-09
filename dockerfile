@@ -12,7 +12,7 @@ COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 #updatepythonpath
-RUN export PYTHONPATH="$PYTHONPATH:/codebase"
+ENV PYTHONPATH "${PYTHONPATH}:${PWD}"
 
 # entrypoint. mountpoint (-v) for codebase from host must be presented or run will fail
-CMD ["python", "parse_bot.py"]
+CMD ["python", "/codebase/parse_bot.py"]
