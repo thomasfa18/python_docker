@@ -11,8 +11,5 @@ ENV PYTHONUNBUFFERED=1
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
 
-#updatepythonpath
-ENV PYTHONPATH="/codebase"
-
 # entrypoint. mountpoint (-v) for codebase from host must be presented or run will fail
 CMD ["python", "/codebase/parse_bot.py"]
