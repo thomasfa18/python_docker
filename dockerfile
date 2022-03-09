@@ -7,6 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
+#include the codebase in the pythonpath (you have to mount this from your host -v)
+ENV PYTHONPATH "${PYTHONPATH}:/codebase"
+
 # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
