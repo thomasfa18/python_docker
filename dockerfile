@@ -15,4 +15,4 @@ RUN python -m pip install -r requirements.txt
 ENV PYTHONPATH="/codebase"
 
 # entrypoint. mountpoint (-v) for codebase from host must be presented or run will fail
-CMD ["python", "parse_bot.py"]
+CMD ["python", "/codebase/parse_bot.py"]
